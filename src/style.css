@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');  
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,31 +14,33 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid white; */
+}
+
+body{
+  height: 10000px;
 }
 
 section{
-  height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
-  position: relative;
+  padding: 5rem 0;
 }
 
 .main{
-  margin: auto;
-  width: 60%;
+  margin: 0;
+  width: 80%;
   height: fit-content;
   display: flex;
   justify-content: center;
 }
 
-.main-content{
-  width: 75%;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
