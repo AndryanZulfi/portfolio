@@ -2,11 +2,11 @@
     <section>
         <div class="main main-about main-content">
             <div class="title">
-                <h2>About Me</h2><hr>
+                <Title title="About Me"/>
             </div>
             <div class="content">
                 <div class="img-">
-                    <ImageMe src="/src/assets/img-me-2.jpeg" alt="My About Picture" :customStyle="{top: '-50%', left: '-38%'}"/>
+                    <ImageMe src="/src/assets/me/img-me-2.jpeg" alt="My About Picture" :customStyle="{top: '-50%', left: '-38%'}"/>
                 </div>
                 <div class="description">
                     <p>
@@ -26,17 +26,12 @@
         flex-direction: column;
         gap: 2.5rem;
     }
-    .main-about .title h2{
-        font-size: 3rem;
-    }
-    .main-about .title hr {
-        width: 40%;
-    }
+
     .main-about .content{
         display: flex;
         gap: 5rem;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: nowrap;
     }
     .main-about .description{
         display: flex;
@@ -44,16 +39,30 @@
         justify-content: center;
         flex-direction: column;
         gap: 10px;
+        min-width: 30%;
+    }
+
+    @media only screen and (max-width: 600px){
+        .main-about .content{
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 1100px){
+        .main-about .content{
+            flex-direction: column
+        }
     }
 </style>
 
 
 <script>
-import ImageMe from './ImageMe.vue';
-
+import ImageMe from './elements/ImageMe.vue';
+import Title from './elements/Title.vue';
 export default{
     components: {
-        ImageMe
+        ImageMe,
+        Title
     }
 }
 </script>

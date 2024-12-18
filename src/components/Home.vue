@@ -7,12 +7,12 @@
             <h2>Student from Gantiwarno</h2>
             <p>Welcome to my personal website</p>
             <ul class="sosmeds">
-                <li v-for="sosmed in sosmeds"><a :href="sosmed.link" target="_blank"><img :src="'/src/assets/'+sosmed.id+'.png'" :alt="sosmed"></a></li>
+                <li v-for="sosmed in sosmeds"><a :href="sosmed.link" target="_blank"><img :src="'/src/assets/sosmeds/'+sosmed.id+'.png'" :alt="sosmed"></a></li>
             </ul>
         </div>
 
         <div class="img-me">
-           <ImageMe src="/src/assets/img-me.JPG" alt="My Profile Picture"/>
+           <ImageMe src="/src/assets/me/img-me.JPG" alt="My Profile Picture"/>
         </div>
         </div>
     </section>
@@ -22,8 +22,14 @@
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');  
  
+
+    section{
+        height: 100vh;
+    }
     .home-main{
         flex-wrap: wrap;
+        margin: auto;
+        width: 60%;
     }
     .home-main .content{
         display: flex;              
@@ -65,7 +71,7 @@
     .sosmeds img{
         width: 35px;
     }
-@media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
     .home-main {
         flex-direction: row;
         width: 80%;
@@ -73,6 +79,7 @@
     .img-me{
         display: none;
     }
+
    
 
 }
@@ -84,7 +91,7 @@
 
 
 <script>
-import ImageMe from './ImageMe.vue';
+import ImageMe from './elements/ImageMe.vue';
     export default{
         data(){
             return{
