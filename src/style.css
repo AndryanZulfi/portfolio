@@ -9,27 +9,30 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Varela Round','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  --gradient: linear-gradient(90deg, #ffffff 0%, #636363 100%);
+  --gradient-title: linear-gradient(90deg, #ffffff -15%, #000000 100%);
+  --gradient-bg: linear-gradient(to top, rgb(0, 0, 0)0, rgb(3, 3, 3) 100%);
+
+  --gray: #9c9c9c;
+  --black: #363636;
+  --white: #d8d8d8;
 }
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 1px solid white; */
+  /* border: 2px solid white; */
 }
 
-body{
-  height: 10000px;
-}
 
 section{
   height: fit-content;
   display: flex;
   justify-content: center;
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
+  /* border: 1px solid white; */
 }
 
 .main{

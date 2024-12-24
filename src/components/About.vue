@@ -6,14 +6,22 @@
             </div>
             <div class="content">
                 <div class="img-">
-                    <ImageMe src="/src/assets/me/img-me-2.jpeg" alt="My About Picture" :customStyle="{top: '-50%', left: '-38%'}"/>
+                    <ImageMe 
+                        imageUrl="/src/assets/me/img-me-4.jpeg"
+                        customPosition="0rem -4rem"
+                        borderColor="#8a8a8a"
+                        customSize="100%"
+                    />
                 </div>
                 <div class="description">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum omnis alias, sint soluta similique vitae eaque id? Excepturi eligendi, nemo optio molestias consequatur dignissimos asperiores. Tenetur voluptatibus maiores voluptatum magni natus, a nostrum ratione excepturi at illo? Officiis excepturi expedita assumenda aperiam blanditiis quaerat, tenetur rem nemo quisquam, eveniet nisi.
+                        Hi, I'm Andryan Zulfi Rahmat Tri Saputra, you can call me Andryan, I'm a student of State Vocational High School 1 Gantiwarno majoring in Computer Engineering and Networking. Currently, I'm studying full-stack web development with a focus on modern technology. I have experience in building applications such as To-Do List App, a web-based task-logging application that uses Express.js and MongoDB for the backend and Vue.js for the frontend.
                     </p>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur corrupti officia qui ipsa, voluptas veritatis voluptatum nam reprehenderit molestiae velit assumenda id omnis cupiditate sunt magni. Debitis provident quia odio!
+                        In my learning journey, I mastered front-end development using Vue.js, HTML, CSS, and JavaScript, as well as back-end development with Node.js, Express.js, and MongoDB. I also understand the application deployment process using Vercel for the frontend and Railway for the backend. With a strong foundation in Computer Engineering and Networking, I have the ability to install and configure local networks.
+                    </p>
+                    <p>
+                        I continue to learn independently through online platforms and actively participate in bootcamps to hone my skills. I believe that technology is a powerful tool to create innovative solutions and help others, and I am excited to continue working in this field.
                     </p>
                 </div>
             </div>

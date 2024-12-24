@@ -1,20 +1,26 @@
 <template>  
-    <nav>
-        <h2>Portfolio;)</h2>
-        <div ref="sidebar" class="menu sidebar" :class="{active: isActive}">
+    <nav :class="{'nav-bg': isScroll == false}" :style="{'justify-content': isScroll ? 'center' : 'space-between'}">
+        <div class="wrapper">
+            <h2 v-show="!isScroll">Portfolio;)</h2>
+        </div>
+        <div ref="sidebar" class="menu sidebar" @click="sidebar" :class="{active: isActive, 'menu-bg': isScroll}">
             <a v-for="menu in menus" :key="menu.id" href="">{{menu.menu}}</a>
         </div>
-        <div class="btn-for-contact">
-            <button>Contact Me</button>
+        <div class="wrapper">
+            <div v-show="!isScroll" class="btn-for-contact">
+                <button>Contact Me</button>
+            </div>
         </div>
         <div ref="btnSidebar" class="icon-sidebar">
-            <i @click="sidebar"  class="fas fa-bars fa-lg"></i>
-        </div>
+                <i @click="sidebar"  class="fas fa-bars fa-lg"></i>
+       </div>
+       
 </nav>
 </template>
 
 
 <style scoped>
+
     nav{
         width: 100%;
         height: 40px;
@@ -26,11 +32,48 @@
         z-index: 9999;
     }
 
-    .menu{
-        display: flex;
-        gap: 16px;
+    nav .wrapper {
+        flex: 1;
     }
 
+    nav .wrapper:nth-child(3) {
+        text-align: end;
+    }
+    h2 {
+        background: var(--gradient);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300%;
+        animation: moving-color 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moving-color {
+        0% {
+            background-position: right;
+        }
+        100% {
+            background-position: left;
+        }
+    }
+    .nav-bg{
+        border-bottom: 1px solid white;
+        background-color: hsla(0, 0%, 18%, 0.9);
+    }
+
+    .menu{
+        display: flex;
+        gap: 1.3rem;
+        transition: .1s ease-in-out;
+        overflow: hidden;
+    }
+
+    .menu-bg{
+        border: 2px solid white;
+        padding: .3rem .6rem;
+        border-radius: 18px;
+        backdrop-filter: blur(20px);
+    }
+    
     .menu a{
         text-decoration: none;
         color: white;
@@ -53,10 +96,8 @@
     }
 
     .btn-for-contact button{
-        /* width: 100px;
-        height: 35px; */
-        padding: 8px 15px;
-        border-radius: 30px;
+        padding: 8px 10px;
+        border-radius: 15px;
         background-color: transparent;
         border-style: groove;
         position: relative;
@@ -108,31 +149,43 @@
     .icon-sidebar {
         display: none;
     }
+
+
     @media only screen and (max-width: 600px){
-        .sidebar{
-            width: 50%;
-            height: 100vh;
+        .menu{
             position: absolute;
-            background-color: gray;
-            right: -100%;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            padding: 40px;
-            transition: .2s;
-            z-index: 99;
+            top: 100%;
+            left: 15%;
+            right: 15%;
+            margin: auto;
+            transition: .1s ease-in-out;
+            backdrop-filter: blur(10px);
+            transform: translateY(0) scale(0) ;
+            overflow: scroll;
+            
         }
-        .sidebar a{
-            width:fit-content;
+        .menu::-webkit-scrollbar {
+            display: none;
+        }
+        .menu a{
+            margin: auto;
         }
 
         .sidebar.active{
-            right: 0;
+            transform: translateY(20px) scale(1) ;
+            
         }
 
+        .sidebar{
+            border: 2px solid white;
+            padding: .3rem .6rem;
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+        }
         .icon-sidebar {
             display: block;
-        }
+            cursor:pointer;
+        } 
         .btn-for-contact{
             display: none;
         }
@@ -144,11 +197,11 @@
 
 
 <script>
-import '@fortawesome/fontawesome-free/css/all.css';
     export default {
         data(){
             return {
                 isActive: false,
+                isScroll: null,
                 menus: [
                     {id: 'home', menu:'Home' },
                     {id: 'about', menu:'About'},
@@ -161,19 +214,24 @@ import '@fortawesome/fontawesome-free/css/all.css';
             sidebar(){
                 this.isActive = !this.isActive
             },
-            handleClickOutside(event) {
-                const sidebarElement = this.$refs.sidebar;
-                const btnSidebar = this.$refs.btnSidebar
-                if ((btnSidebar && !btnSidebar.contains(event.target)) && (sidebarElement && !sidebarElement.contains(event.target))) {
-                    this.isActive = false
-                }
-            }
+
+            handleScrolled(){
+               if(window.scrollY > 50 && window.innerWidth > 600){
+                this.isScroll =  true
+               }else if(window.scrollY > 50 && window.innerWidth < 600){
+                this.isScroll =  false
+               }else{
+                this.isScroll = null
+               }
+            },
+
+            
         },
         mounted() {
-            window.addEventListener('click', this.handleClickOutside);
+            window.addEventListener('scroll', this.handleScrolled)
         },
         beforeDestroy() {
-            window.removeEventListener('click', this.handleClickOutside);
+            window.removeEventListener('scroll', this.handleScrolled)
         }
     }
 
