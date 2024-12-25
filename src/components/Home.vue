@@ -83,9 +83,11 @@
    
 
     .sosmeds img{
-        width: 35px;
+        width: 28px;
+        margin: 4px;
     }
-    @media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
     .home-main {
         flex-direction: row;
         width: 80%;

@@ -27,9 +27,7 @@
         <div class="input-textarea">
           <textarea name="message" id="messages" placeholder="Message..."></textarea>
         </div>
-        <button class="btn">
-          Kirim Pesan
-        </button>
+        <Button text="Kirim Pesan" :customStyle="{padding: '1.2rem 2.2rem', 'font-size': '1.7rem', 'margin-top': '2rem'}"></Button>
       </form>
          </div>
         </div>
@@ -91,7 +89,6 @@
   padding-left: 1.4rem;
   margin-top: 1.5rem;
   align-items: center;
-  /* justify-content: center; */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -120,56 +117,6 @@ textarea{
   color: #fff;
 }
 
-.main-contact .row form .btn {
-  margin-top: 3rem;
-  padding: 1.2rem 2.2rem;
-  background: transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.7rem;
-  color: #fff;
-  border: 1px solid var(--white);
-  position: relative;
-  z-index: 3;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.main-contact .row .btn::before,
-.main-contact .row .btn::after {
-  content: "";
-  width: 100%;
-  height: 50%;
-  background-color: var(--gray);
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  transition: transform 0.5s;
-}
-
-
-.main-contact .row .btn::before {
-  top: 0;
-  left: 0;
-  transform-origin: left;
-  transform: scaleX(0);
-}
-.main-contact .row .btn::after {
-  bottom: 0;
-  right: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-}
-
-.main-contact .row .btn:hover::before {
-  transform-origin: right;
-  transform: scaleX(1);
-}
-.main-contact .row .btn:hover::after {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
 @media only screen and (max-width: 772px){
   .main-contact .row {
     flex-wrap: wrap;
@@ -184,5 +131,11 @@ textarea{
 </style>
 
 <script>
-import 'ionicons/dist/ionicons/ionicons.esm.js';
+import Button from './elements/buttons/Button.vue';
+
+  export default {
+      components: {
+        Button
+      }
+  }
 </script>

@@ -16,9 +16,6 @@
 
 
 <style scoped>
-*{
-    /* border: 2px solid white; */
-}
     footer{ 
         width: 100%;
         background-color: var(--black);

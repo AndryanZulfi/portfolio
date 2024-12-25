@@ -6,10 +6,10 @@ import { createPinia } from 'pinia'
 import 'ionicons/dist/ionicons/ionicons.esm.js';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faInstagram, faTiktok, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Impor ikon Instagram
+import { faInstagram, faTiktok, faLinkedin , faGithub} from '@fortawesome/free-brands-svg-icons'; // Impor ikon Instagram
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faInstagram, faTiktok, faLinkedin);
+library.add(faInstagram, faTiktok, faLinkedin, faGithub);
 
 
 

@@ -1,113 +1,35 @@
 <template>
      <section>
-        <div class="main main-projects" style="top: 15%;">
+        <div 
+            class="main main-projects" 
+            v-for="(project, i) in projects" 
+            :key="project.id"
+            :style="{top: fixedTop[i] + '%'}" 
+            >
             <div class="description">
                 <div class="title-description">
-                    <h3>Project Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolorum? Obcaecati aut officia possimus similique accusamus impedit tempora iusto eius iste pariatur vitae voluptates esse ad maxime, sequi, neque fuga?</p>
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
                 </div>
                 <div class="btn-visit">
-                    <button>Visit Site</button>
+                    <ButtonVisit text="Visit" :link="project.link"></ButtonVisit>
                 </div>
                
             </div>
             <div class="detail">
-                <div class="image-for-project">
-                    <img src="../../assets/projects/project1.png" alt="">
+                <div 
+                    class="image-for-project"
+                    :style="{'background-image': `url(/src/assets/projects/${project.id}.png)`}"
+                >
                 </div>
                 <div class="situation">
                     <div class="status">
-                        <p>Project Status</p>
-                        <h4 class="bold">Completed</h4>
+                        <p>Status</p>
+                        <h4 class="bold">{{project.status}}</h4>
                     </div>
                     <div class="progress">
-                        <p>Progress Project</p>
-                        <h4 class="bold">100%</h4>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="main main-projects" style="top: 18%;">
-            <div class="description">
-                <div class="title-description">
-                    <h3>Project Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolorum? Obcaecati aut officia possimus similique accusamus impedit tempora iusto eius iste pariatur vitae voluptates esse ad maxime, sequi, neque fuga?</p>
-                </div>
-                <div class="btn-visit">
-                    <button>Visit Site</button>
-                </div>
-               
-            </div>
-            <div class="detail">
-                <div class="image-for-project">
-                    <img src="../../assets/projects/project1.png" alt="">
-                </div>
-                <div class="situation">
-                    <div class="status">
-                        <p>Project Status</p>
-                        <h4 class="bold">Completed</h4>
-                    </div>
-                    <div class="progress">
-                        <p>Progress Project</p>
-                        <h4 class="bold">100%</h4>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="main main-projects" style="top: 21%;">
-            <div class="description">
-                <div class="title-description">
-                    <h3>Project Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolorum? Obcaecati aut officia possimus similique accusamus impedit tempora iusto eius iste pariatur vitae voluptates esse ad maxime, sequi, neque fuga?</p>
-                </div>
-                <div class="btn-visit">
-                    <button>Visit Site</button>
-                </div>
-               
-            </div>
-            <div class="detail">
-                <div class="image-for-project">
-                    <img src="../../assets/projects/project1.png" alt="">
-                </div>
-                <div class="situation">
-                    <div class="status">
-                        <p>Project Status</p>
-                        <h4 class="bold">Completed</h4>
-                    </div>
-                    <div class="progress">
-                        <p>Progress Project</p>
-                        <h4 class="bold">100%</h4>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="main main-projects" style="top: 24%;">
-            <div class="description">
-                <div class="title-description">
-                    <h3>Project Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, dolorum? Obcaecati aut officia possimus similique accusamus impedit tempora iusto eius iste pariatur vitae voluptates esse ad maxime, sequi, neque fuga?</p>
-                </div>
-                <div class="btn-visit">
-                    <button>Visit Site</button>
-                </div>
-               
-            </div>
-            <div class="detail">
-                <div class="image-for-project">
-                    <img src="../../assets/projects/project1.png" alt="">
-                </div>
-                <div class="situation">
-                    <div class="status">
-                        <p>Project Status</p>
-                        <h4 class="bold">Completed</h4>
-                    </div>
-                    <div class="progress">
-                        <p>Progress Project</p>
-                        <h4 class="bold">100%</h4>
+                        <p>Progress</p>
+                        <h4 class="bold">{{project.progress}}%</h4>
                     </div>
                 </div>
                 
@@ -127,15 +49,15 @@
 
     *{
         font-family: "Varela Round", sans-serif, "Pacifico", cursive;
+        /* border: 1px solid white; */
     }
+
     .main-projects{
-        /* gap: 3.5rem; */
         width: 85%;
+        height: 78vh;
         border-radius: 16px;
         position: sticky;
-        top: 15%;
         background-color: rgb(51, 51, 51);
-        flex-wrap: wrap;
         border: 1px solid white;
     }
 
@@ -143,40 +65,49 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        flex: 1;
+        gap: 20px;
     }
 
-    .main-projects .description .title-description{
-        margin-bottom: 20px;
+    .main-projects .description p{
+        overflow: scroll;
+        height: 34vh;
     }
+
+    .main-projects .description p::-webkit-scrollbar{
+        display: none;
+    }
+
     .main-projects .description .title-description h3{
-        font-size: 2rem;
-        margin-bottom: 12px
+        font-size: 4vw;
+        margin-bottom: 12px;
     }
-
-    .main-projects .description .btn-visit button{
-        padding: 8px 16px;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
 
     .main-projects .description,
     .main-projects .detail{
-        flex: 50%;
+        flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        
     }
+    
+    
 
     .main-projects .situation{
         display: flex;
     }
 
-    .main-projects .situation .status,
-    .main-projects .situation .progress{
-        flex: 50%;
-        
+
+    .image-for-project {
+        flex: 3;
+        background-size: cover;
+        background-position: center;
+        border-radius: 14px;
+    }
+
+    .situation {
+        flex: 1;
     }
 
 
@@ -184,9 +115,11 @@
     .main-projects .detail .progress{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
         margin: 10px;
         gap: 10px;
+        flex: 50%;
+        
     } 
        
     .main-projects .detail img{
@@ -198,5 +131,60 @@
         font-weight: bold;
     }
    
+    .btn-visit{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+
+    @media only screen and (max-width: 950px) {
+        .main-projects{
+            flex-direction: column;
+        }
+
+        .main-projects .description {
+            flex: 1;
+            padding-bottom: 0;
+        }
+
+        .main-projects .detail {
+            flex: 2;
+        }
+
+        .main-projects .description p{
+            overflow: scroll;
+            height: 15vh;
+        }
+        .main-projects .detail {
+            padding-top: 0;
+        }
+        .btn-visit{
+            margin-bottom: 40px;
+         }
+
+    }
 
 </style>
+
+<script>
+    import ButtonVisit from './buttons/ButtonVisit.vue';
+    import { useProjectsStore } from '../../stores/projects';
+
+    export default {
+        data(){
+            return{
+                styleTopProject: [],
+                fixedTop: this.projects.map((acc, i) => (12 + (i *3)))
+            }
+        },
+        setup() {
+            const projectsStore = useProjectsStore();
+            return {
+                projects: projectsStore.projects
+            }
+        },
+        components: {
+            ButtonVisit
+        }
+    }
+</script>
