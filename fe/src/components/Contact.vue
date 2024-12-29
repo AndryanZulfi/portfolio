@@ -77,7 +77,7 @@ import { useToast } from 'vue-toastification';
             event.preventDefault();
             const data = Object.fromEntries(Object.entries(this.formData));
 
-            const response = await axios.post(`${API_URL}/send-email`, data, {
+            const response = await axios.post(`/send-email`, data, {
               headers: {
               'Content-Type': 'application/json'
               }

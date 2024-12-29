@@ -5,9 +5,6 @@
         </div>
         <div class="main main-skills">
             <div class="content">
-                <div class="img-">
-                    <ImageMe src="/src/assets/img-me-2.jpeg" alt="My About Picture" :customStyle="{top: '-50%', left: '-38%'}"/>
-                </div>
                 <div class="list-skills">
                     <ul>
                         <li 
@@ -17,7 +14,7 @@
                             @mouseleave="hideSpan(i)"
                             class="skill-item"
                         >
-                            <img :src="'/src/assets/skills/'+skill.type+'.png'" :alt="skill.type">
+                            <img :src="'src/assets/skills/'+skill.type+'.png'" :alt="skill.type">
                             <transition name="fade">
                                 <span v-if="skill.condition" class="skill-name">
                                     {{ skill.name }}

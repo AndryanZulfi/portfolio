@@ -13,7 +13,7 @@
 
         <div class="img-me">
            <ImageMe 
-                imageUrl="/src/assets/me/img-me.JPG"
+                imageUrl="src/assets/me/img-me.JPG"
                 customPosition="-7rem -10rem"
             />
         </div>

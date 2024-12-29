@@ -22,7 +22,7 @@
             <div class="detail">
                 <div 
                     class="image-for-project"
-                    :style="{'background-image': `url(/src/assets/projects/${project.id}.png)`}"
+                    :style="{'background-image': `url(src/assets/projects/${project.id}.png)`}"
                 >
                 </div>
                 <div class="situation">
