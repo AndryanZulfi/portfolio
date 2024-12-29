@@ -7,13 +7,13 @@
             <h2>Studying Web Developper</h2>
             <p>Welcome to my personal website</p>
             <ul class="sosmeds">
-                <li v-for="sosmed in sosmeds"><a :href="sosmed.link" target="_blank"><img :src="'/src/assets/sosmeds/'+sosmed.id+'.png'" :alt="sosmed"></a></li>
+                <li v-for="sosmed in sosmeds"><a :href="sosmed.link" target="_blank"><img :src="'@/assets/sosmeds/'+sosmed.id+'.png'" :alt="sosmed"></a></li>
             </ul>
         </div>
 
         <div class="img-me">
            <ImageMe 
-                imageUrl="src/assets/me/img-me.JPG"
+                imageUrl="@/assets/me/img-me.JPG"
                 customPosition="-7rem -10rem"
             />
         </div>

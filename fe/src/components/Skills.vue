@@ -14,7 +14,7 @@
                             @mouseleave="hideSpan(i)"
                             class="skill-item"
                         >
-                            <img :src="'src/assets/skills/'+skill.type+'.png'" :alt="skill.type">
+                            <img :src="'@/assets/skills/'+skill.type+'.png'" :alt="skill.type">
                             <transition name="fade">
                                 <span v-if="skill.condition" class="skill-name">
                                     {{ skill.name }}

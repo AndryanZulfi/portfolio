@@ -7,7 +7,7 @@
             <div class="content">
                 <div class="img">
                     <ImageMe 
-                        imageUrl="src/assets/me/img-me-3.jpeg"
+                        imageUrl="@/assets/me/img-me-3.jpeg"
                         customPosition="0rem -4rem"
                         borderColor="#8a8a8a"
                         customSize="100%"
