@@ -10,7 +10,7 @@
                 </a>
             </li>
         </ul>
-        <p>Copyright andryan-zulfi - &copy;  2024</p>
+        <p>&copy; 2024 Andryan | All Rights Reserved</p>
     </footer>
 </template>
 
@@ -27,7 +27,6 @@
     }
 
     .sosmeds{
-        /* border: 2px solid white; */
         display: flex;
         gap: 1.5rem;
         margin-top: 1.4rem;
@@ -41,7 +40,9 @@
     .sosmeds .sosmed {
         animation: wave 5s infinite ease-in-out;
     }
-
+    p{
+        font-size: 90%;
+    }
     @keyframes wave {
     0%, 100% {
         transform: translateY(0);

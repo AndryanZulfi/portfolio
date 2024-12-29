@@ -6,7 +6,7 @@ export const useProjectsStore = defineStore('projects', {
             { 
                 id: 'toDoList',
                 title: 'To-Do-List', 
-                description: 'Aplikasi To-Do List adalah aplikasi berbasis web yang memungkinkan pengguna untuk mencatat, memperbarui, menandai, dan menghapus daftar tugas mereka. Proyek ini dibuat menggunakan teknologi front-end modern dengan Vue.js serta backend yang kuat dengan Express.js dan MongoDB sebagai basis datanya. Aplikasi ini dirancang agar sederhana, responsif, dan mudah digunakan.', 
+                description: 'To-Do List app is a web-based application that allows users to record, update, mark, and delete their to-do lists. This project is built using modern front-end technology with Vue.js and backend with Express.js and MongoDB as its database.', 
                 status: 'Completed', 
                 progress: 100,
                 link: 'https://todolist-1iyo7w6rz-andryanzulfis-projects.vercel.app/'
@@ -14,7 +14,7 @@ export const useProjectsStore = defineStore('projects', {
             { 
                 id: 'hotWheelsHaven', 
                 title: 'HotWheels Haven', 
-                description: 'Hot Wheels Haven adalah platform e-commerce yang dirancang khusus untuk penggemar dan kolektor mobil miniatur Hot Wheels. Website ini menyediakan berbagai macam produk Hot Wheels, mulai dari seri klasik hingga edisi terbatas, dengan antarmuka yang intuitif dan fitur-fitur yang memudahkan pengguna dalam mencari, membeli, dan mengoleksi.',
+                description: 'Hot Wheels Haven is an e-commerce simulation platform designed specifically for Hot Wheels miniature car enthusiasts and collectors. The website provides a wide range of Hot Wheels products, from classic series to limited editions, with an intuitive interface and features that make it easy for users to search, buy, and collect.',
                 status: 'Pending',
                 progress: 50,
                 link: 'https://andryanzulfi.github.io/HotwheelsHaven/'
@@ -22,7 +22,7 @@ export const useProjectsStore = defineStore('projects', {
             { 
                 id: 'gallNime', 
                 title: 'GallNime', 
-                description: 'GallNime adalah website yang menyediakan galeri foto dan gambar berkualitas tinggi dari berbagai anime populer. Website ini dirancang untuk para penggemar anime yang ingin menemukan dan mendownload gambar-gambar favorit dari karakter, adegan, atau momen ikonik dalam anime. Dengan antarmuka yang sederhana dan navigasi yang mudah, GallNime adalah tempat yang sempurna bagi pencinta seni anime.',
+                description: 'GallNime is a website that provides high-quality photo galleries and images from various popular anime. This website is designed for anime fans who want to find and download their favorite images of iconic characters, scenes, or moments in anime. With a simple interface and easy navigation, GallNime is the perfect place for anime art lovers.',
                 status: 'Pending',
                 progress: 30,
                 link: 'https://andryanzulfi.github.io/GallNime/'
@@ -30,7 +30,7 @@ export const useProjectsStore = defineStore('projects', {
             {
                 id: 'katik',
                 title: 'Katik',
-                description: 'Katik adalah alat sederhana yang dirancang untuk membantu menghitung luas dan keliling segitiga dengan cepat dan akurat. Pengguna hanya perlu memasukkan panjang sisi atau parameter lainnya yang diperlukan, dan kalkulator ini akan memberikan hasilnya secara instan.',
+                description: 'Katik is a simple tool designed to help calculate the area and perimeter of triangles quickly and accurately. Users only need to enter the length of the side or other required parameters, and the calculator will provide the results instantly.',
                 status: 'Completed',
                 progress: 100,
                 link: 'https://revou-fundamental-course.github.io/25-dec-23-AndryanZulfi/'
@@ -38,7 +38,7 @@ export const useProjectsStore = defineStore('projects', {
             {
                 id: 'galeryNaruto',
                 title: 'Gallery Naruto',
-                description: 'GaleryNaruto adalah website galeri sederhana yang dirancang untuk menampilkan koleksi foto karakter dari anime populer Naruto. Website ini menampilkan berbagai gambar dari Naruto dan teman-temannya, termasuk karakter seperti Sasuke, Sakura, Kakashi, dan banyak lagi. ',
+                description: 'GaleryNaruto is a simple gallery website designed to display a collection of character photos from the popular anime Naruto. The website features images of Naruto and his friends, including characters such as Sasuke, Sakura, Kakashi',
                 status: 'Completed',
                 progress: 100,
                 link: 'https://andryanzulfi.github.io/GalleryNaruto/'

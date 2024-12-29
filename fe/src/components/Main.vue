@@ -19,7 +19,7 @@
     import Projects from './Projects.vue';
     import Contact from './Contact.vue';
     import Footer from './Footer.vue';
-  
+
     export default{
       components: {
         Nav,
@@ -37,7 +37,6 @@
     main{
     display: flex;
     flex-direction: column;
-    /* gap: 10rem; */
   }
   
   </style>

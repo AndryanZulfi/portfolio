@@ -3,23 +3,26 @@
         <div class="wrapper">
             <h2 v-show="!isScroll">Portfolio;)</h2>
         </div>
-        <div ref="sidebar" class="menu sidebar" @click="sidebar" :class="{active: isActive, 'menu-bg': isScroll}">
-            <a v-for="menu in menus" :key="menu.id" :href="'#'+menu.id">{{menu.menu}}</a>
+        <div  class="menu sidebar" :class="{active: isActive, 'menu-bg': isScroll}">
+            <a  v-for="menu in menus" :key="menu.id" :href="'#'+menu.id">{{menu.menu}}</a>
+            <a  class="contact-nav" href="#contact">Contact</a>
         </div>
         <div class="wrapper">
             <div v-show="!isScroll" class="btn-for-contact">
-                <button>Contact Me</button>
+                <a href="#contact"><button >Contact</button></a>
             </div>
         </div>
-        <div ref="btnSidebar" class="icon-sidebar">
-                <i @click="sidebar"  class="fas fa-bars fa-lg"></i>
-       </div>
+        <div class="btn-sidebar">
+            <ButtonNav @click="sidebar" :isActive="isActive"></ButtonNav>
+        </div>
        
 </nav>
 </template>
 
 
 <style scoped>
+
+
 
     nav{
         width: 100%;
@@ -69,7 +72,7 @@
 
     .menu-bg{
         border: 2px solid white;
-        padding: .3rem .6rem;
+        padding: .6rem 1rem;
         border-radius: 18px;
         backdrop-filter: blur(20px);
     }
@@ -94,10 +97,12 @@
         transform: scaleX(0.7);
         transition: 0.2s linear;
     }
-
+    .contact-nav{
+        display: none;
+    }
     .btn-for-contact button{
-        padding: 8px 10px;
-        border-radius: 15px;
+        padding: 8px 14px;
+        border-radius: 12px;
         background-color: transparent;
         border-style: groove;
         position: relative;
@@ -146,7 +151,7 @@
         transform: scaleX(1);
         transform-origin: right;
     }
-    .icon-sidebar {
+    .btn-sidebar {
         display: none;
     }
 
@@ -178,16 +183,21 @@
 
         .sidebar{
             border: 2px solid white;
-            padding: .3rem .6rem;
-            border-radius: 18px;
+            padding: .6rem 1.5rem;
+            border-radius: 22px;
+            gap: 2rem;
             backdrop-filter: blur(10px);
         }
-        .icon-sidebar {
+        .btn-sidebar {
             display: block;
             cursor:pointer;
         } 
         .btn-for-contact{
             display: none;
+        }
+
+        .contact-nav{
+            display: block;
         }
         
     }
@@ -197,6 +207,7 @@
 
 
 <script>
+import ButtonNav from './buttons/ButtonNav.vue';
     export default {
         data(){
             return {
@@ -209,6 +220,9 @@
                     {id: 'projects', menu:'Projects'}
                 ]
             }
+        },
+        components: {
+            ButtonNav
         },
         methods: {
             sidebar(){

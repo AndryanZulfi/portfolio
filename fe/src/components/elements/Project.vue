@@ -1,5 +1,8 @@
 <template>
      <section id="projects">
+        <div class="title">
+                <Title title="My Projects"/>
+         </div>
         <div 
             class="main main-projects" 
             v-for="(project, i) in projects" 
@@ -41,20 +44,15 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');  
-    section{
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-    }
 
     *{
         font-family: "Varela Round", sans-serif, "Pacifico", cursive;
-        /* border: 1px solid white; */
     }
+
 
     .main-projects{
         width: 85%;
-        height: 78vh;
+        height: 80vh;
         border-radius: 16px;
         position: sticky;
         background-color: rgb(51, 51, 51);
@@ -162,11 +160,16 @@
             margin-bottom: 40px;
          }
 
+        .main-projects .description .title-description h3{
+            font-size: 1.5rem;
+        }
+
     }
 
 </style>
 
 <script>
+    import Title from './Title.vue';
     import ButtonVisit from './buttons/ButtonVisit.vue';
     import { useProjectsStore } from '../../stores/projects';
 
@@ -174,7 +177,7 @@
         data(){
             return{
                 styleTopProject: [],
-                fixedTop: this.projects.map((acc, i) => (12 + (i *3)))
+                fixedTop: this.projects.map((acc, i) => (12 + (i *2)))
             }
         },
         setup() {
@@ -184,7 +187,8 @@
             }
         },
         components: {
-            ButtonVisit
+            ButtonVisit,
+            Title
         }
     }
 </script>

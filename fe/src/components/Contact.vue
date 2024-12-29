@@ -2,11 +2,9 @@
      <section id="contact">
         <div class="main main-contact">
             <div class="description">
-                <h2><span>Kontak</span> Me</h2>
-            <p>Jangan ragu untuk menghubungi kami! Kami siap membantu dan
-                merespon pertanyaan Anda. Silakan hubungi tim layanan
-                pelanggan kami melalui formulir kontak di website. Kami
-                berkomitmen untuk memberikan pelayanan terbaik kepada Anda. Terima kasih atas dukungan Anda!
+                <h2><span>Contact</span> Me</h2>
+            <p>
+              Feel free to contact me! I am ready to help and answer your questions. Please contact me through the contact form on this website. I am very open to your criticism and opinions. Thank you for your support!
             </p>
             </div>
             
@@ -27,7 +25,7 @@
         <div class="input-textarea">
           <textarea name="message" id="messages" placeholder="Message..." v-model="formData.message" cols="30" rows="10" type="text"  required></textarea>
         </div>
-        <Button text="Kirim" :customStyle="{padding: '1rem 3rem', 'font-size': '1.4rem', 'margin-top': '2rem'}"></Button>
+        <ButtonSubmit :customStyle="{margin: '2rem auto'}"/>
       </form>
          </div>
         </div>
@@ -40,7 +38,7 @@
 
 
 <script>
-import Button from './elements/buttons/Button.vue';
+import ButtonSubmit from './elements/buttons/ButtonSubmit.vue';
 import axios from 'axios'
 import Loader from './elements/loaders/Loader.vue';
 import { useToast } from 'vue-toastification';
@@ -59,7 +57,7 @@ import { useToast } from 'vue-toastification';
         
       },
       components: {
-        Button,
+        ButtonSubmit,
         Loader,
       },
       methods: {
@@ -107,6 +105,9 @@ import { useToast } from 'vue-toastification';
 </script>
 
 <style scoped>
+
+
+
 section {
   position: relative;
 }

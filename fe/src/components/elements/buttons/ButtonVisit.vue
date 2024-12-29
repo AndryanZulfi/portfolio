@@ -67,7 +67,7 @@
 .btn .btn-content {
   display: flex;
   align-items: center;
-  padding: 2px 18px 2px 24px;
+  padding: 2px 14px 2px 24px;
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
@@ -84,7 +84,7 @@
   -webkit-animation: btn-content 1s;
   animation: btn-content 1s;
   outline: 0.1em solid transparent;
-  outline-offset: 0.2em;
+  outline-offset: 0.5em;
   box-shadow: 0 0 0.4em 0 var(--color-background);
 }
 
@@ -96,7 +96,7 @@
 
 .btn .btn-content:hover .icon-arrow {
   transition: 0.5s;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .btn .icon-arrow {

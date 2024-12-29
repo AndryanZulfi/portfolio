@@ -1,9 +1,9 @@
 <template>
     <section id="about">
-        <div class="main main-about main-content">
-            <div class="title">
+        <div class="title">
                 <Title title="About Me"/>
-            </div>
+        </div>
+        <div class="main main-about main-content">
             <div class="content">
                 <div class="img">
                     <ImageMe 
@@ -43,6 +43,8 @@
     }
     .main-about .description{
         display: flex;
+        text-indent: 2rem;
+        text-align: justify;
         align-items: center; 
         justify-content: center;
         flex-direction: column;

@@ -1,9 +1,9 @@
 <template>
     <section id="skills">
-        <div class="main main-skills">
-            <div class="title">
+        <div class="title">
                 <Title title="My Skills"/>
-            </div>
+        </div>
+        <div class="main main-skills">
             <div class="content">
                 <div class="img-">
                     <ImageMe src="/src/assets/img-me-2.jpeg" alt="My About Picture" :customStyle="{top: '-50%', left: '-38%'}"/>
@@ -39,7 +39,7 @@
     .main-skills{
         flex-direction: column;
         gap: 20px;
-        margin-top: 2rem;
+        width: 85%;
     }
 
     .main-skills .content .list-skills ul{
@@ -48,21 +48,21 @@
     }
    
     .main-skills .content .list-skills ul li {
-    border: 2px solid white;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 10px;
-    list-style: none;
-    text-align: center;
-    flex: 25%;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    transition: padding 0.3s ease, transform 0.3s ease; 
-    position: relative; 
-}
+        border: 2px solid white;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+        list-style: none;
+        text-align: center;
+        flex: 25%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        transition: padding 0.3s ease, transform 0.3s ease; 
+        position: relative; 
+    }
 
 .main-skills .content .list-skills ul li:hover {
     padding-right: 1.5rem; 
