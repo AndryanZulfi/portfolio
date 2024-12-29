@@ -1,6 +1,5 @@
 <template>
 
-  <!-- <LoadingLoad :isLoading="isLoading"/> -->
   <Main />
 
 </template>
@@ -8,7 +7,6 @@
 
 <script>
   import Main from './components/Main.vue'
-  import LoadingLoad from './components/elements/loaders/LoadingLoad.vue'
 
   export default{
     data(){
@@ -18,7 +16,6 @@
     },
     components: {
       Main,
-      LoadingLoad
     },
 
     mounted() {

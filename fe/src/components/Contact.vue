@@ -38,6 +38,7 @@
 
 
 <script>
+const API_URL = import.meta.env.VITE_API_URL
 import ButtonSubmit from './elements/buttons/ButtonSubmit.vue';
 import axios from 'axios'
 import Loader from './elements/loaders/Loader.vue';
@@ -76,7 +77,7 @@ import { useToast } from 'vue-toastification';
             event.preventDefault();
             const data = Object.fromEntries(Object.entries(this.formData));
 
-            const response = await axios.post('http://localhost:3000/send-email', data, {
+            const response = await axios.post(`${API_URL}/send-email`, data, {
               headers: {
               'Content-Type': 'application/json'
               }
