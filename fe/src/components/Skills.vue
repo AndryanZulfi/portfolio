@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="skills">
         <div class="main main-skills">
             <div class="title">
                 <Title title="My Skills"/>
@@ -35,9 +35,11 @@
 
 <style scoped>
 
+    
     .main-skills{
         flex-direction: column;
-        gap: 20px
+        gap: 20px;
+        margin-top: 2rem;
     }
 
     .main-skills .content .list-skills ul{

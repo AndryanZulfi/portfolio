@@ -1,5 +1,5 @@
 <template>
-    <div class="circle-container" :style="{ '--size': size, '--border-color': borderColor }">
+    <div class="circle-container" :style="{ '--size': size, '--border-color': borderColor}">
       <div class="circle-image" :style="{ backgroundImage: `url(${imageUrl})`, 'background-position': customPosition, 'background-size': customSize}"></div>
     </div>
   </template>

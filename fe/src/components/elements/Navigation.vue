@@ -4,7 +4,7 @@
             <h2 v-show="!isScroll">Portfolio;)</h2>
         </div>
         <div ref="sidebar" class="menu sidebar" @click="sidebar" :class="{active: isActive, 'menu-bg': isScroll}">
-            <a v-for="menu in menus" :key="menu.id" href="">{{menu.menu}}</a>
+            <a v-for="menu in menus" :key="menu.id" :href="'#'+menu.id">{{menu.menu}}</a>
         </div>
         <div class="wrapper">
             <div v-show="!isScroll" class="btn-for-contact">
@@ -205,8 +205,8 @@
                 menus: [
                     {id: 'home', menu:'Home' },
                     {id: 'about', menu:'About'},
-                    {id: 'skils', menu:'Skills'},
-                    {id: 'project', menu:'Project'}
+                    {id: 'skills', menu:'Skills'},
+                    {id: 'projects', menu:'Projects'}
                 ]
             }
         },

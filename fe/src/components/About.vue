@@ -1,11 +1,11 @@
 <template>
-    <section>
+    <section id="about">
         <div class="main main-about main-content">
             <div class="title">
                 <Title title="About Me"/>
             </div>
             <div class="content">
-                <div class="img-">
+                <div class="img">
                     <ImageMe 
                         imageUrl="/src/assets/me/img-me-3.jpeg"
                         customPosition="0rem -4rem"
@@ -48,6 +48,9 @@
         flex-direction: column;
         gap: 10px;
         min-width: 30%;
+    }
+    .main-about .content .img{
+        margin: auto;
     }
 
     @media only screen and (max-width: 600px){

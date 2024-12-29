@@ -1,5 +1,5 @@
 <template>
-    <button class="btn" :style="customStyle">
+    <button type="submit" class="btn" :style="customStyle">
           {{text}}
     </button>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="home">
         <div class="main home-main">
         <div class="content">
             <p>Hello World, i'm</p>

@@ -1,5 +1,5 @@
 <template>
-     <section>
+     <section id="projects">
         <div 
             class="main main-projects" 
             v-for="(project, i) in projects" 
