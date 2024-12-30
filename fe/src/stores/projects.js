@@ -9,7 +9,7 @@ export const useProjectsStore = defineStore('projects', {
                 description: 'To-Do List app is a web-based application that allows users to record, update, mark, and delete their to-do lists. This project is built using modern front-end technology with Vue.js and backend with Express.js and MongoDB as its database.', 
                 status: 'Completed', 
                 progress: 100,
-                link: 'https://todolist-1iyo7w6rz-andryanzulfis-projects.vercel.app/'
+                link: 'https://todolist-zlf.vercel.app/'
             },
             { 
                 id: 'hotWheelsHaven', 

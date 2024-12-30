@@ -4,20 +4,22 @@ import { SunIcon, MoonIcon } from 'lucide-vue-next'
 
 const isDark = ref(false)
 
-// Fungsi toggle tema
 const toggleTheme = () => {
-  const newTheme = isDark.value ? 'light' : 'dark' // Tentukan tema baru
-  isDark.value = !isDark.value // Perbarui state
-  document.documentElement.classList.remove('light', 'dark') // Hapus kelas tema lama
-  document.documentElement.classList.add(newTheme) // Tambahkan kelas tema baru
-  localStorage.setItem('theme', newTheme) // Simpan tema baru ke localStorage
+  const newTheme = isDark.value ? 'light' : 'dark'
+  isDark.value = !isDark.value 
+  document.documentElement.classList.remove('light', 'dark')
+  document.documentElement.classList.add(newTheme) 
+  localStorage.setItem('theme', newTheme)
+  console.log(document.documentElement.classList)
+  console.log(newTheme)
 }
 
-// Lifecycle onMounted untuk memuat tema yang disimpan atau preferensi perangkat
+
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-  isDark.value = savedTheme === 'dark' // Set state berdasarkan tema yang disimpan
-  document.documentElement.classList.add(savedTheme) // Tambahkan kelas tema ke elemen <html>
+  console.log(savedTheme)
+  isDark.value = savedTheme === 'dark' 
+  document.documentElement.classList.add(savedTheme) 
 })
 </script>
 

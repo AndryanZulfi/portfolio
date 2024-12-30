@@ -15,6 +15,7 @@
            <ImageMe 
                 imageUrl="/me/img-me.JPG"
                 customPosition="-7rem -10rem"
+                borderColor="var(--border)"
             />
         </div>
         </div>

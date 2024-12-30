@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');  
 
-:root {
+:root.light {
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
