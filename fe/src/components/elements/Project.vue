@@ -55,8 +55,8 @@
         height: 80vh;
         border-radius: 16px;
         position: sticky;
-        background-color: rgb(51, 51, 51);
-        border: 1px solid white;
+        background-color:  var(--dark-white);
+        border: 1px solid var(--border);
     }
 
     .main-projects .description{

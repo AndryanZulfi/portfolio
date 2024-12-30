@@ -37,8 +37,8 @@
   scale: 1;
   font-family: inherit;
   font-size: 18px;
-  background: #5e5e5e;
-  color: white;
+  background: var(--bg-btn) ;
+  color: var(--color-font);
   padding: 15px 24px 15px 24px;
   width: 140px;
   display: flex;

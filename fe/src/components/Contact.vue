@@ -139,8 +139,8 @@ section {
 .main-contact .row{
   display: flex;
   margin-top: 2rem;
-  background-color: var(--black);
-  box-shadow: 0 0 2rem var(--gray);
+  background-color: var(--bg-contact);
+  box-shadow: 0 0 2rem var(--shadow-contact);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -159,8 +159,8 @@ section {
 .main-contact .row form .input-group, 
 .input-textarea {
   display: flex;
-  background-color: var(--black);
-  border: 2px solid var(--gray);
+  background-color: var(--bg-contact);
+  border: 2px solid var(--shadow-contact);
   padding-left: 1.4rem;
   margin-top: 1.5rem;
   align-items: center;
@@ -178,7 +178,7 @@ textarea{
   padding: 1rem;
   font-size: 1rem;
   background: none;
-  color: #fff;
+  color: var(--color-font);
   outline: 0;
   border: none;
 }
@@ -189,7 +189,7 @@ textarea{
 
 .main-contact .row .input-group i{
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--color-font);
 }
 
 .loading-indicator{
@@ -201,7 +201,7 @@ textarea{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--bg-loading);
   z-index: 9999;
 }
 

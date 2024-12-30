@@ -24,8 +24,8 @@
   background: transparent;
   border-radius: 5px;
   cursor: pointer;
-  color: #fff;
-  border: 1px solid var(--white);
+  color: var(--color-font);
+  border: 1px solid var(--border);
   position: relative;
   z-index: 3;
   overflow: hidden;
@@ -37,7 +37,7 @@
   content: "";
   width: 100%;
   height: 50%;
-  background-color: var(--gray);
+  background-color: var(--border);
   position: absolute;
   z-index: -1;
   overflow: hidden;

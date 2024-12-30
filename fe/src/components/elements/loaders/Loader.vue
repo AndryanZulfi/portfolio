@@ -17,7 +17,7 @@
 .loader-4 .box1,
 .loader-4 .box2,
 .loader-4 .box3 {
-  border: 10px solid #cecece;
+  border: 10px solid var(--border);
   border-radius: 56px;
   box-sizing: border-box;
   position: absolute;

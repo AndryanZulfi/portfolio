@@ -22,5 +22,6 @@
     }
     hr {
         width: 40%;
+        border-color: var(--border);
     }
 </style>

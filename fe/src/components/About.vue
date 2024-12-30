@@ -9,7 +9,7 @@
                     <ImageMe 
                         imageUrl="/me/img-me-3.jpeg"
                         customPosition="0rem -4rem"
-                        borderColor="#8a8a8a"
+                        borderColor="var(--border)"
                         customSize="100%"
                     />
                 </div>

@@ -18,7 +18,7 @@
 <style scoped>
     footer{ 
         width: 100%;
-        background-color: var(--black);
+        background-color: var(--bg-footer);
         align-items: center;
         display: flex;
         flex-direction: column;

@@ -42,7 +42,7 @@
     width: var(--size);
     height: var(--size);
     max-height: 90vw;
-    background: #242424;
+    background: var(--bg-color);
     border-radius: 50%;
     display: flex;
     align-items: center;

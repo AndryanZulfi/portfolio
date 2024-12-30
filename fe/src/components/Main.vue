@@ -7,6 +7,7 @@
     <Projects />
     <Contact />
     <Footer />
+    <Toggle />
   </main>
   </template>
   
@@ -19,6 +20,7 @@
     import Projects from './Projects.vue';
     import Contact from './Contact.vue';
     import Footer from './Footer.vue';
+    import Toggle from './elements/Toggle.vue';
 
     export default{
       components: {
@@ -29,6 +31,7 @@
         Projects,
         Contact,
         Footer,
+        Toggle
       },
     }
   </script>

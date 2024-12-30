@@ -45,7 +45,7 @@
     }
    
     .main-skills .content .list-skills ul li {
-        border: 2px solid white;
+        border: 2px solid var(--border);
         padding: 1rem;
         margin: 1rem;
         border-radius: 10px;
@@ -68,7 +68,7 @@
 
 .main-skills .content .list-skills ul li img {
     width: 2rem;
-    filter: drop-shadow(0 0 0.2rem white);
+    filter: drop-shadow(0 0 0.2rem var(--border));
     transition: transform 0.3s ease; 
 }
 

@@ -32,7 +32,7 @@
 <style scoped>
 
 .button {
-  background: rgb(255 255 255 / 16%);
+  background:  var(--bg-btnNav);
   border: 0;
   width: 56px;
   height: 56px;
@@ -65,7 +65,7 @@
 .line {
   fill: none;
   transition: 0.4s;
-  stroke: #f9f9f9;
+  stroke: var(--border);
   stroke-width: 3;
   stroke-linecap: round;
 }

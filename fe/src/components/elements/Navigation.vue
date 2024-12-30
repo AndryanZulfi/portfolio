@@ -59,8 +59,8 @@
         }
     }
     .nav-bg{
-        border-bottom: 1px solid white;
-        background-color: hsla(0, 0%, 18%, 0.9);
+        border-bottom: 1px solid var(--border);
+        background-color: var(--bg-nav)
     }
 
     .menu{
@@ -71,7 +71,7 @@
     }
 
     .menu-bg{
-        border: 2px solid white;
+        border: 2px solid var(--border);
         padding: .6rem 1rem;
         border-radius: 18px;
         backdrop-filter: blur(20px);
@@ -79,17 +79,17 @@
     
     .menu a{
         text-decoration: none;
-        color: white;
+        color: var(--color-font);
     }
     .menu a:hover{
-        color: #fff022;
+        color: var(--color-nav);
     }
 
     .menu a::after{
         content: '';
         display: block;
         margin-top: 0.1rem;
-        border-bottom: 0.1rem solid  #ffffff;
+        border-bottom: 0.1rem solid  var(--border);
         transform: scaleX(0);
         left: 0;
     }
@@ -108,9 +108,10 @@
         position: relative;
         overflow: hidden;
         transition: 0.5s;
+        border-color: var(--color-font);
+        color: var(--color-font)
     }
     .btn-for-contact button:hover{
-        color: black;
         cursor: pointer;
         border-style: dashed;
     }
@@ -121,7 +122,7 @@
         content: '';
         width: 100%;
         height: 50%;
-        background-color: white;
+        background-color: var(--dark-white);
         position: absolute;
         z-index: -1;
         overflow: hidden;
@@ -182,7 +183,7 @@
         }
 
         .sidebar{
-            border: 2px solid white;
+            border: 2px solid var(--border);
             padding: .6rem 1.5rem;
             border-radius: 22px;
             gap: 2rem;

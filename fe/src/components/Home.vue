@@ -50,7 +50,7 @@
     .home-main .content .cursor{
         width: 3px;
         height: 60px;
-        background-color: white;
+        background-color: var(--border);
     }
     .home-main .content h1{
         display: flex;

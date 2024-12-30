@@ -58,8 +58,8 @@
 
 <style scoped>
 .btn {
-  --color-text: #ffffff;
-  --color-background: #ffffff;
+  --color-text: var(--color-font);
+  --color-background: var(--color-font);
   --color-outline: #91919180;
   --color-shadow: #00000080;
 }
@@ -72,7 +72,7 @@
   font-weight: 500;
   font-size: 18px;
   color: var(--color-text);
-  background: rgb(37, 37, 37);
+  background: var(--bg-color);
   transition: 1s;
   border-radius: 100px;
   box-shadow: 0 0 0.2em 0 var(--color-background);
@@ -135,15 +135,15 @@
 /* SVG animations */
 @keyframes color_anim {
   0% {
-    fill: white;
+    fill: var(--border);
   }
 
   50% {
-    fill: var(--color-background);
+    fill: var(--bg-nav);
   }
 
   100% {
-    fill: white;
+    fill: var(--border);
   }
 }
 
