@@ -10,14 +10,11 @@ const toggleTheme = () => {
   document.documentElement.classList.remove('light', 'dark')
   document.documentElement.classList.add(newTheme) 
   localStorage.setItem('theme', newTheme)
-  console.log(document.documentElement.classList)
-  console.log(newTheme)
 }
 
 
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-  console.log(savedTheme)
   isDark.value = savedTheme === 'dark' 
   document.documentElement.classList.add(savedTheme) 
 })

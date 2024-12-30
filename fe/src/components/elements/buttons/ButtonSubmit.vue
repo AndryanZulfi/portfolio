@@ -72,7 +72,7 @@
 }
 
 .btn:hover span {
-  transform: translateX(5em);
+  transform: translateX(8em);
 }
 
 .btn:active {
