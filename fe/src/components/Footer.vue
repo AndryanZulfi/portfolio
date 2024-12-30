@@ -57,7 +57,6 @@
 
 
 <script>
-import 'ionicons/dist/ionicons/ionicons.esm.js';    
 import { useSosmedStore } from '../stores/sosmeds';
     export default {
 
