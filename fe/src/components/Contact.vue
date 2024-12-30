@@ -38,12 +38,11 @@
 
 
 <script>
-const API_URL = import.meta.env.API_URL
 import ButtonSubmit from './elements/buttons/ButtonSubmit.vue';
 import axios from 'axios'
 import Loader from './elements/loaders/Loader.vue';
 import { useToast } from 'vue-toastification';
-
+const API_URL = import.meta.env.VITE_API_URL
 
   export default {
       data(){
@@ -72,6 +71,7 @@ import { useToast } from 'vue-toastification';
           toast.error(message)
         },
         async sendMessage(event){
+          console.log(API_URL)
           this.isLoading = true
           try {
             event.preventDefault();
