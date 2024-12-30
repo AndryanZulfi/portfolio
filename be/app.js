@@ -20,7 +20,12 @@ const transporter = nodemailer.createTransport({
 
 
 app.get('/', (res, req) => {
-  res.status(200).send('Hello World!')
+  try{
+    res.status(200).send('Hello World!')
+  }catch(error){
+    res.status(500).send('Errorrr')
+  }
+  
 })
 
 app.post("/send-email", (req, res) => {
