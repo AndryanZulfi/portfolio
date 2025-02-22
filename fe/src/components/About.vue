@@ -15,14 +15,11 @@
                 </div>
                 <div class="description">
                     <p>
-                        Hi, I'm Andryan Zulfi Rahmat Tri Saputra, you can call me Andryan, I'm a student of State Vocational High School 1 Gantiwarno majoring in Computer Engineering and Networking. Currently, I'm studying full-stack web development with a focus on modern technology. I have experience in building applications such as To-Do List App, a web-based task-logging application that uses Express.js and MongoDB for the backend and Vue.js for the frontend.
-                    </p>
+                        Hi, I'm Andryan Zulfi Rahmat Tri Saputra, you can call me Andryan. I am a student of SMKN 1 Gantiwarno majoring in Computer and Network Engineering (TKJ) who is passionate about learning web development, especially in the front-end field.                    </p>
                     <p>
-                        In my learning journey, I mastered front-end development using Vue.js, HTML, CSS, and JavaScript, as well as back-end development with Node.js, Express.js, and MongoDB. I also understand the application deployment process using Vercel for the frontend and Railway for the backend. With a strong foundation in Computer Engineering and Networking, I have the ability to install and configure local networks.
-                    </p>
+                        With self-learning experience through free online platforms, I have developed applications using the Vue.js framework and built backends with Express and MongoDB.                    </p>
                     <p>
-                        I continue to learn independently through online platforms and actively participate in bootcamps to hone my skills. I believe that technology is a powerful tool to create innovative solutions and help others, and I am excited to continue working in this field.
-                    </p>
+                        I am always open to new challenges, have good adaptability, and continue to improve my skills through projects, bootcamps, and scholarship                    </p>
                 </div>
             </div>
         </div>
@@ -70,12 +67,14 @@
 
 
 <script>
+import ButtonDownload from './elements/buttons/ButtonDownload.vue';
 import ImageMe from './elements/ImageMe.vue';
 import Title from './elements/Title.vue';
 export default{
     components: {
         ImageMe,
-        Title
+        Title,
+        ButtonDownload
     }
 }
 </script>

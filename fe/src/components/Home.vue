@@ -9,6 +9,7 @@
             <ul class="sosmeds">
                 <li v-for="sosmed in sosmeds"><a :href="sosmed.link" target="_blank"><img :src="'/sosmeds/'+sosmed.id+'.png'" :alt="sosmed"></a></li>
             </ul>
+            <!-- <ButtonDownload text="My CV" /> -->
         </div>
 
         <div class="img-me">
@@ -25,7 +26,10 @@
 
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');  
- 
+    
+    *{
+        /* border: 2px solid white */
+    }
 
     section{
         height: 100vh;
@@ -42,7 +46,6 @@
         flex: 50%;
         gap: 2px;
         justify-content: center;
-        
     }
     .img-me{
         display: flex;
@@ -110,6 +113,7 @@
 <script>
 import ImageMe from './elements/ImageMe.vue';
 import { useSosmedStore } from '../stores/sosmeds';
+import ButtonDownload from './elements/buttons/ButtonDownload.vue';
     export default{
         data(){
             return{
@@ -148,7 +152,8 @@ import { useSosmedStore } from '../stores/sosmeds';
             this.showName()
         },
         components: {
-            ImageMe
+            ImageMe,
+            ButtonDownload
         },
         setup() {
             const sosmedStore = useSosmedStore();

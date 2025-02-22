@@ -23,6 +23,8 @@
   --bg-footer: #c2bfb3;
   --bg-btnNav: rgba(117, 117, 117, 0.16);
   --bg-btn:#ffffff;
+  --bg-btnDownload: #A0937D;
+  --bg-btnDownload-hover: #636260;
 } 
 
 
@@ -48,6 +50,8 @@
   --bg-footer: #363636;
   --bg-btnNav: rgb(255 255 255 / 16%);
   --bg-btn:#5e5e5e;
+  --bg-btnDownload: #636260;
+  --bg-btnDownload-hover: #A0937D;
 }
 
 @media (prefers-color-scheme: dark) {
