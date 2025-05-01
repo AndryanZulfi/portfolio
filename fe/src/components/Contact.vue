@@ -93,7 +93,7 @@ const API_URL = import.meta.env.VITE_API_URL
             }
           }catch(e){
             console.error(e)
-            this.toastError('Gagal mengirim pesan. Periksa koneksi Anda.')  
+            this.toastError('Maaf server sedang error. Anda bisa contact saya melalui sosmed.')  
           }finally{
             this.isLoading = false
           }
